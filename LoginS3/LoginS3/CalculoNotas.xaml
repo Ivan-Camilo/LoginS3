@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviours="clr-namespace:LoginS3"
+    x:Class="LoginS3.CalculoNotas">
+    <ContentPage.Content>
+
+        <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calculo de Notas" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+       
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblNota1" Grid.Row="0" Grid.Column="0" Text="Nota Seguimiento 1: " VerticalTextAlignment="Center"/>
+            <Entry x:Name="txtNota1"
+                   Grid.Row="0" Grid.Column="1" Placeholder="Ingrese Nota 1"
+                   FontSize="15" Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behaviours:MaximumAmountEntryBehavior MaximumAmount="10" />
+                    </Entry.Behaviors>
+             </Entry>
+
+            <Label x:Name="lblExamen1" Grid.Row="1" Grid.Column="0" Text="Examen 1: " VerticalTextAlignment="Center"/>
+            <Entry x:Name="txtExamen1" 
+                   Grid.Row="1" Grid.Column="1" Placeholder="Ingrese Examen 1"
+                   FontSize="15" Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behaviours:MaximumAmountEntryBehavior MaximumAmount="10" />
+                    </Entry.Behaviors>
+             </Entry>
+
+            <Label x:Name="lblParcial" Grid.Row="2" Grid.Column="0" Text="Nota Parcial 1: " VerticalTextAlignment="Center"/>
+            <Label x:Name="lblNotaparcial" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"/>
+
+            <Label x:Name="lblNota2" Grid.Row="3" Grid.Column="0" Text="Nota Seguimiento 2: " VerticalTextAlignment="Center"/>
+            <Entry x:Name="txtNota2"
+                   Grid.Row="3" Grid.Column="1" Placeholder="Ingrese Nota 2"
+                   FontSize="15" Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behaviours:MaximumAmountEntryBehavior MaximumAmount="10" />
+                    </Entry.Behaviors>
+            </Entry>
+
+            <Label x:Name="lblExamen2" Grid.Row="4" Grid.Column="0" Text="Examen 2: " VerticalTextAlignment="Center"/>
+            <Entry x:Name="txtExamen2"
+                   Grid.Row="4" Grid.Column="1" Placeholder="Ingrese Examen 2"
+                   FontSize="15" Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behaviours:MaximumAmountEntryBehavior MaximumAmount="10" />
+                    </Entry.Behaviors>
+            </Entry>
+
+            <Label x:Name="lblParcial2" Grid.Row="5" Grid.Column="0" Text="Nota Parcial 2: " VerticalTextAlignment="Center"/>
+            <Label x:Name="lblNotaparcial2" Grid.Row="5" Grid.Column="1" VerticalTextAlignment="Center"/>
+
+            <Label x:Name="lblFinal" Grid.Row="6" Grid.Column="0" Text="Nota Final: " VerticalTextAlignment="Center"/>
+            <Label x:Name="lblNotafinal" Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center"/>
+
+            <Button x:Name="Calcular" Grid.Row="7" Grid.Column="0" Text="Calcular" Clicked="Calcular_Clicked" />
+            <Button x:Name="Borrar" Grid.Row="7" Grid.Column="1" Text="Borrar Texto" Clicked="Borrar_Clicked"/>
+
+        </Grid>
+
+    </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+

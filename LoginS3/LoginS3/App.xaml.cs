@@ -10,7 +10,7 @@ namespace LoginS3
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new CalculoNotas();
         }
 
         protected override void OnStart ()
