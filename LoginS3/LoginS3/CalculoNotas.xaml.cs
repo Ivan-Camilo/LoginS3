@@ -7,10 +7,11 @@ namespace LoginS3
 {
     public partial class CalculoNotas : ContentPage
     {
-        public CalculoNotas()
+        public CalculoNotas(string usuario)
         {
             InitializeComponent();
             DisplayAlert("Advertencia", "\nSolo ingresar valores entre 0.1 y 10", "OK");
+            lblusuario.Text = "Bienvenido " + usuario;
         }
         void Calcular_Clicked(System.Object sender, System.EventArgs e)
         {

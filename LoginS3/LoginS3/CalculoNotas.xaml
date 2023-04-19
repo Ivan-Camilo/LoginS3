@@ -10,6 +10,10 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Calculo de Notas" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
+
+        <Frame  Padding="10" CornerRadius="0">
+            <Label x:Name="lblusuario" HorizontalTextAlignment="End" TextColor="Black" FontSize="15"/>
+        </Frame>
        
         
         <Grid>
